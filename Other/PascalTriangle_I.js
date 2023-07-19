@@ -13,7 +13,7 @@ Constraints:
 */
 
 var generate = function (numRows) {
-    if (numRows === 0) return []
+    if (numRows <= 0) return []
 
     /* Khởi tạo mảng triangle, hàng đầu tiên chỉ chứa số 1
     triangle là mảng chứa nhiều mảng con là các hàng (hiểu đơn giản là chứa tất cả hàng của tam giác) */
