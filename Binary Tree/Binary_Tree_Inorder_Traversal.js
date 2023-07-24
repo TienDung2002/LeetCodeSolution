@@ -98,7 +98,7 @@ Giải thích thứ tự duyệt:
      /
     3
 
-    Duyệt tuân theo thứ tự: trải - nút - phải
+    Duyệt tuân theo thứ tự: trải - root(gốc) - phải
 B1: bắt đầu nút gốc (1)
 B2: duyệt cây con trái của nút gốc (1), ở đây nút trái là null
 B3: ghé thăm lại nút gốc (1) và thêm giá trị vào result = [1]
