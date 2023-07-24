@@ -1,8 +1,8 @@
-/* Đề bài: Cho 1 cây gốc nhị phân, trả về thứ tự các giá trị node của nó
+/* Đề bài: Cho 1 cây gốc nhị phân, trả về các giá trị nút của nó theo thứ tự in-order
 
 Example 1:
 Input: root = [1, null, 2, 3]
-Output: [1,3,2
+Output: [1,3,2]
 
 Example 2:
 Input: root = []
@@ -17,7 +17,7 @@ Số nút trong cây nằm trong khoảng [0, 100].
 -100 <= Node.val <= 100
 */
 
-// Lưu ý: thứ tự duyệt inorder như sau: trái - nút - phải 
+// Lưu ý: thứ tự duyệt in-order như sau: trái -> root(gốc) -> phải 
 
 function TreeNode(val, left, right) {
     this.val = (val === undefined ? 0 : val)
@@ -27,7 +27,6 @@ function TreeNode(val, left, right) {
 
 var inorderTraversal = function(root) {
     const result = []
-
 
     function traverse(node) {
         if (node !== null) {
