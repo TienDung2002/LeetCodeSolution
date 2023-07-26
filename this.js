@@ -47,22 +47,13 @@ test_1();
 4. Gọi "this" với call() và apply()
 */
 
-// const animal = {
-//     type: "Dog",
-//     legs: 4
-// }
-// function testCalApp(message) {
-//     console.log(`${message}, I've a ${this.type} and it has ${this.legs} legs`);
-// }
-// testCalApp.call(animal, 'Hello')
-// testCalApp.apply(animal, ['Hi'])
-
 const animal = {
     type: "Dog",
     legs: 4
 }
-function testCalApp() {
-    console.log(`I've a ${this.type} and it has ${this.legs} legs`);
+function testCalApp(message) {
+    console.log(`${message}, I've a ${this.type} and it has ${this.legs} legs`);
 }
-testCalApp.call(animal)
-testCalApp.apply(animal)
+testCalApp.call(animal, 'Hello')
+testCalApp.apply(animal, ['Hi'])
+
