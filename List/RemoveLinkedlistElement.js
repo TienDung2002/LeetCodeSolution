@@ -25,8 +25,30 @@ function ListNode(val, next) {
     this.next = (next === undefined ? null : next)
 }
 
-var removeElements = function (head, next) {
+var removeElements = function (head, val) {
+    if (!head) return head
 
+    // Trường hợp ngay nút đầu tiên đã bằng val
+    while(head) {
+        if (head.val === val) {
+            head = head.next
+        } else {
+            break
+        }
+    }
+
+    let cur = head
+    while(cur && cur.next) {
+        // Nếu gặp cur.val === val thì nhảy cóc ra nút đằng sau nút có giá trị = val luôn
+        if (cur.next === val) {
+            cur.next = cur.next.next
+        } 
+        // Nếu cur.val !== val thì tiếp tục đi lần lượt nút
+        else {
+            cur = cur.next
+        }
+    }
+    return head
 }
 
 var head = new ListNode(1)
